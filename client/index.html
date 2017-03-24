@@ -1,0 +1,26 @@
+<html ng-app="pollsApp">
+<head>
+    <title>Polls App</title>
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <script src='./static/js/angular.js'></script>
+    <script src='./static/js/angular-route.js'></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- We load all our modularized javascript files -->
+    <script type="text/javascript" src="./static/js/config/routes.js"></script>
+    <script type="text/javascript" src="./static/js/factories/userFactory.js"></script>
+    <script type="text/javascript" src="./static/js/factories/pollFactory.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/usersController.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/pollsController.js"></script>
+    <script type="text/javascript" src="./static/js/config/ng_storage_config.js"></script>
+
+</head>
+<body>
+    <div class="container" ng-view=''>
+</body>
+</html>

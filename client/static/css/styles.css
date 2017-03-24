@@ -1,0 +1,60 @@
+.container{
+    border: 1px solid silver;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.subdiv{
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid silver;
+    border-radius: 5px;
+
+}
+
+.subdiv input{
+    margin: 5px;
+}
+
+.subdiv table{
+    border: 1px solid silver;
+    border-collapse: collapse;
+}
+    .subdiv table tr{
+        text-align: center;
+        padding-left: 20px;
+    }
+
+    table thead{
+        background-color: yellow;
+    }
+
+    .subdiv table td{
+        padding: 18px;
+        border: 1px solid silver;
+    }
+.subdiv table td a{
+    background-color: azure;
+}
+.subdiv a{
+    background-color: orange;
+    padding: 5px;
+}
+
+div.span{
+  background-color: orange;
+}
+
+.form-container, .table-container, .main-wrapper{
+  margin: 50px 200px 50px 50px;
+}
+/* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+.form-horizontal .control-label{
+    padding-top: 7px;
+}
+.user-table{
+  margin-left: 160px;
+}
