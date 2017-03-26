@@ -4,6 +4,7 @@ pollsApp.controller('pollsController', function(userFactory, pollFactory, $locat
     this.user = userFactory.user();
     this.index = function(){
         pollFactory.index(function(data){
+          debugger;
             if(data){
                 that.polls = data;
             }

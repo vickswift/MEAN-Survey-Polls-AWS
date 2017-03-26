@@ -37,6 +37,7 @@ module.exports = {
                         });
                         //set reference to user
                         poll._user = req.body.author;
+                        console.log('============', req.body, user)
                         user.polls.push(poll);
                         //save poll to db
                         poll.save(function(err, poll){
@@ -46,12 +47,12 @@ module.exports = {
                             }
                         else{res.json(poll)};
                     })
-                   
+
                     });
                 }
             }
         });
-         
+
     },
 
     show: function(req, res){
@@ -90,5 +91,5 @@ module.exports = {
         })
     }
 
-    
+
 };

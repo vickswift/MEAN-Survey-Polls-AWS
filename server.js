@@ -1,16 +1,19 @@
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
-var app = express();
+var mongoose = require( 'mongoose' ),
+    express  = require( 'express' ),
+    bp       = require('body-parser'),
+    path     = require( 'path' ),
+    root     = __dirname,
+    port     = process.env.PORT || 8000,
+    app      = express();
 
-app.use(express.static(__dirname + '/client/'));
-app.use(bodyParser.json());
+app.use( express.static( path.join( root, 'client' )));
+app.use( express.static( path.join( root, 'bower_components' )));
+app.use(bp.json())
+
 //import routes
-require('./server/config/mongoose.js')
-require('./server/config/routes.js')
-var routes_setter = require('./server/config/routes.js')
-routes_setter(app);
+require('./server/config/mongoose.js');
+require('./server/config/routes.js')(app);
 
-app.listen(8000, function(){
-    console.log("Listening on 8000");
-})
+app.listen( port, function() {
+  console.log( `server running on port ${ port }` );
+});
