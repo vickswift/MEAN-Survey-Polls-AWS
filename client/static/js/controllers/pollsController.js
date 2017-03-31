@@ -4,7 +4,7 @@ pollsApp.controller('pollsController', function(userFactory, pollFactory, $locat
     this.user = userFactory.user();
     this.index = function(){
         pollFactory.index(function(data){
-          debugger;
+          // debugger;
             if(data){
                 that.polls = data;
             }
@@ -15,9 +15,10 @@ pollsApp.controller('pollsController', function(userFactory, pollFactory, $locat
 
     this.logout = function(){
         console.log(that.user);
-        $location.url('/login');
         that.user = {}
         userFactory.logout();
+        $location.url('/login');
+
     }
 
     this.create = function(){
